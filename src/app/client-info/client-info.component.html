@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+            <div class="card container">
+                <div class="card-header" style="background-color:#007bff;">
+                        <b>Client registration</b>
+                </div>
+                <div class="card-body">
+                    <form #register="ngForm" (ngSubmit)="clientSaving(register)">
+                        <label>Client Id</label>
+                        <input type="text" name="number" class="form-control" [(ngModel)]="cli.id" #id="ngModel" required>
+                        <span class="error" *ngIf="id.touched && id.invalid">
+                            Client id  should not be blank
+                        </span><br>
+
+                        <label>Client Full Name</label>
+                        <input type="text" name="fname" class="form-control" [(ngModel)]="cli.client_name" #fName="ngModel" required>
+                        <span class="error" *ngIf="fName.touched && fName.invalid">
+                            Client Name should not be blank
+                        </span> <br>
+
+                        <label>Email</label>
+                        <input type="mail" name="mail" class="form-control" [(ngModel)]="cli.client_email" #mailId="ngModel" required>
+                        <span class="error" *ngIf="mailId.touched && mailId.invalid">
+                            Client Email should not be blank
+                        </span><br>
+
+                        <label>Adress</label>
+                        <textarea name="adress" class="form-control" cols="8" rows="3" [(ngModel)]="cli.client_adress" #add="ngModel" required></textarea>
+                        <span class="error" *ngIf="add.touched && add.invalid">
+                            Client Adress should not be blank
+                        </span><br>
+
+                        <label>Password</label>
+                        <input type="password"  name="psword" class="form-control" [(ngModel)]="cli.client_password" #pssword="ngModel" required>
+                        <span class="error" *ngIf="pssword.touched && pssword.invalid">
+                            Password should not be blank 
+                        </span><br>
+
+                        <label>Confirm Password</label>
+                        <input type="password"  name="cpsword" class="form-control" [(ngModel)]="cpassword" #cpssword="ngModel" required>
+                        <span  class="error_pass"  *ngIf="!passwordsMatch()">
+                            Password not matched
+                        </span><br>
+
+                        <input type="submit"  value="submit details" class="btn btn-success" [disabled]="!register.valid">
+
+                        </form>
+                </div>
+            </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<hr>
+<div class="container">
+    <h2>All Clients Information</h2>
+</div>
+<hr>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>ADRESS</th>
+                <th>PASSWORD</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let det of allclients">
+            <td>{{det.id}}</td>
+            <td>{{det.client_name}}</td>
+            <td>{{det.client_email}}</td>
+            <td>{{det.client_adress}}</td>
+            <td>{{det.client_password}}</td>
+            <td><input type="button" value="delete" class="btn btn-danger" (click)="delEmp(det.id)"></td>
+        </tr>
+    </table>
+                
+</div>
+

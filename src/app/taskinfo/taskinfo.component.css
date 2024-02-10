@@ -1,0 +1,26 @@
+.container {
+    padding: 20px;
+    background-color: #e4ecf5; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+input.ng-touched.ng-valid
+{
+    border: 2px green solid;
+}
+
+input.ng-touched.ng-invalid
+{
+    border: 2px red solid;
+    color: red;
+}
+
+.error
+{
+    color:red;
+    font-weight: bold;
+}
+th{
+    background-color: #007bff;
+}

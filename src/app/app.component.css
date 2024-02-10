@@ -1,0 +1,27 @@
+ul li{
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    justify-content:center;
+    gap: 60px;
+    background-color:#333;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+a{
+   line-height: 40px;
+   color: white;
+   margin: 0px 15px;
+   padding: 5px;
+}
+.active{
+    background-color: rgb(237, 140, 13);
+    border-radius: 5px;
+    height: 40px;
+    margin: 2px;
+}

@@ -1,0 +1,9 @@
+th{
+    background-color: #007bff;
+}
+.container {
+    padding: 20px;
+    background-color: #e4ecf5; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}

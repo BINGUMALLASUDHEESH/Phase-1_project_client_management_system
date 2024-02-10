@@ -1,0 +1,29 @@
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-title {
+    font-weight: bold;
+    color: #333;
+}
+.card-text {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #e304d0;
+    border-color: #0056b3;
+}
+.container{
+    padding: 20px;
+    background-color: #e4ecf5; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}

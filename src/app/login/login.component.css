@@ -1,0 +1,47 @@
+.background-container {
+    background: #333;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  } 
+.card {
+    width: 100%;
+  }
+.card-header {
+  background-color: #007bff;
+    color: white;
+  }
+.card-body {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(148, 187, 231, 0.1);
+  }
+.form-group {
+    text-align: left;
+  }
+  
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+  }
+input.ng-touched.ng-valid
+{
+    border: 2px green solid;
+}
+
+input.ng-touched.ng-invalid
+{
+    border: 2px red solid;
+    color: red;
+}
+
+.error
+{
+    color:red;
+    font-weight: bold;
+}

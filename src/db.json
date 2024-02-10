@@ -1,0 +1,234 @@
+{
+  "Clients": [
+    {
+      "id": "1",
+      "client_name": "admin",
+      "client_adress": "Tricon infotech",
+      "client_email": "admin@gmail.com",
+      "client_password": "admin@123"
+    },
+    {
+      "id": "2",
+      "client_name": "ABC",
+      "client_email": "abc@gmail.com",
+      "client_adress": "Hitech city Hyderabad",
+      "client_password": "abc@123"
+    },
+    {
+      "id": "3",
+      "client_name": "XYZ",
+      "client_email": "xyz@gmail.com",
+      "client_adress": "Banglore manyata tech park",
+      "client_password": "xyz@123"
+    },
+    {
+      "id": "4",
+      "client_name": "SSS",
+      "client_email": "sss@gmail.com",
+      "client_adress": "Delhi,",
+      "client_password": "sss@123"
+    },
+    {
+      "id": "5",
+      "client_name": "IJK",
+      "client_email": "ijk@gmail.com",
+      "client_adress": "pune ",
+      "client_password": "ijk@123"
+    },
+    {
+      "id": "6",
+      "client_name": "MNO",
+      "client_email": "mno@gmail.com",
+      "client_adress": "mumbai",
+      "client_password": "mno@123"
+    }
+  ],
+  "Projects": [
+    {
+      "id": "101",
+      "projectName": "library management system",
+      "projectDuration": "6 months",
+      "clientid": "2"
+    },
+    {
+      "id": "102",
+      "projectName": "college management system",
+      "projectDuration": "10 months",
+      "clientid": "4"
+    },
+    {
+      "id": "103",
+      "projectName": "water management system",
+      "projectDuration": "8 months",
+      "clientid": "3"
+    },
+    {
+      "id": "104",
+      "projectName": "Hospital management system",
+      "projectDuration": "5 months",
+      "clientid": "6"
+    },
+    {
+      "id": "105",
+      "projectName": "Restarent app",
+      "projectDuration": "4 months",
+      "clientid": "5"
+    },
+    {
+      "id": "106",
+      "projectName": "booking app",
+      "projectDuration": "5 months",
+      "clientid": "2"
+    }
+  ],
+  "Proj_Tasks": [
+    {
+      "id": "1001",
+      "taskName": "User Authentication System",
+      "taskDescription": "Implement secure login functionality for library staff and users, ensuring only authorized access to the system, enhancing data privacy and security.",
+      "projectid": "101"
+    },
+    {
+      "id": "1002",
+      "taskName": "Student Registration System",
+      "taskDescription": "Develop a platform for new and existing students to register for courses, manage personal details, and track academic progress, ensuring smooth administrative processes and student engagement.",
+      "projectid": "102"
+    },
+    {
+      "id": "1003",
+      "taskName": "Water Usage Monitoring",
+      "taskDescription": "Develop a system to monitor water consumption across various sectors, track usage patterns, and identify areas for conservation, promoting sustainable water management practices.",
+      "projectid": "103"
+    },
+    {
+      "id": "1004",
+      "taskName": "Patient Registration and Records",
+      "taskDescription": "Develop a comprehensive system for patient registration, maintaining electronic health records, and managing appointments, ensuring efficient workflows and accurate documentation.",
+      "projectid": "104"
+    },
+    {
+      "id": "1005",
+      "taskName": "Leak Detection and Repair",
+      "taskDescription": "Implement a solution for detecting leaks in water distribution systems, promptly identifying and repairing issues to minimize water loss and optimize resource utilization.",
+      "projectid": "103"
+    },
+    {
+      "id": "1006",
+      "taskName": "Order Management and Tracking",
+      "taskDescription": "Develop a platform for managing orders from various channels, tracking order status, and coordinating kitchen operations, ensuring timely preparation and delivery of meals.",
+      "projectid": "105"
+    },
+    {
+      "id": "1007",
+      "taskName": "Inventory and Pharmacy Management",
+      "taskDescription": "Implement a solution for managing medical supplies, tracking inventory levels, and facilitating procurement processes, ensuring availability of essential supplies for patient care.",
+      "projectid": "104"
+    },
+    {
+      "id": "1008",
+      "taskName": "Menu Customization and Pricing",
+      "taskDescription": "Implement a feature for customizing menus, updating prices, and managing promotions, providing flexibility to adapt offerings based on customer preferences and market trends.",
+      "projectid": "105"
+    },
+    {
+      "id": "1009",
+      "taskName": "Doctor and Staff Scheduling",
+      "taskDescription": "Create a scheduling system for doctors and staff, optimizing shifts, managing rotations, and ensuring adequate coverage to meet patient needs and maintain operational efficiency.",
+      "projectid": "104"
+    },
+    {
+      "id": "1010",
+      "taskName": "Faculty Management Module",
+      "taskDescription": "Implement a system for faculty members to manage their schedules, submit grades, communicate with students, and access resources, facilitating efficient teaching and administrative tasks.",
+      "projectid": "102"
+    },
+    {
+      "id": "1011",
+      "taskName": "Fine Calculation Module",
+      "taskDescription": "Create a module to calculate fines for overdue books, considering factors like loan duration and fine rates, providing accurate penalties for late returns, and facilitating fair transactions.",
+      "projectid": "101"
+    }
+  ],
+  "Client_Meetings": [
+    {
+      "id": "1111",
+      "meetingTopic": "User Feedback Analysis and System Improvement",
+      "numberOfPersons": 15,
+      "startDateTime": "2024-02-12T09:00",
+      "clientId": "2",
+      "status": "open"
+    },
+    {
+      "id": "1112",
+      "meetingTopic": "Library Automation Implementation Review",
+      "numberOfPersons": 20,
+      "startDateTime": "2024-02-13T09:25",
+      "clientId": "2",
+      "status": "open"
+    },
+    {
+      "id": "1113",
+      "meetingTopic": "Faculty Training Workshop on Online Teaching Tools",
+      "numberOfPersons": 20,
+      "startDateTime": "2024-02-12T09:00",
+      "clientId": "4",
+      "status": "open"
+    },
+    {
+      "id": "1114",
+      "meetingTopic": "Assessment and Grading Policy Alignment Session",
+      "numberOfPersons": 10,
+      "startDateTime": "2024-02-13T10:00",
+      "clientId": "4",
+      "status": "open"
+    },
+    {
+      "id": "1115",
+      "meetingTopic": "Progress Review Meeting for Water Conservation Initiative",
+      "numberOfPersons": 20,
+      "startDateTime": "2024-02-17T11:00",
+      "clientId": "3",
+      "status": "open"
+    },
+    {
+      "id": "1116",
+      "meetingTopic": "Water Management Strategy Discussion",
+      "numberOfPersons": 30,
+      "startDateTime": "2024-02-19T10:00",
+      "clientId": "3",
+      "status": "open"
+    },
+    {
+      "id": "1117",
+      "meetingTopic": "Patient Care Improvement Workshop",
+      "numberOfPersons": 15,
+      "startDateTime": "2024-02-14T09:00",
+      "clientId": "6",
+      "status": "open"
+    },
+    {
+      "id": "1118",
+      "meetingTopic": "Quality Assurance Meeting for Healthcare Services",
+      "numberOfPersons": 10,
+      "startDateTime": "2024-02-15T08:00",
+      "clientId": "6",
+      "status": "open"
+    },
+    {
+      "id": "1119",
+      "meetingTopic": "Customer Experience Enhancement Brainstorming Session",
+      "numberOfPersons": 30,
+      "startDateTime": "2024-02-11T10:59",
+      "clientId": "5",
+      "status": "open"
+    },
+    {
+      "id": "1120",
+      "meetingTopic": "Menu Design and Pricing Strategy Meeting",
+      "numberOfPersons": 5,
+      "startDateTime": "2024-02-13T10:34",
+      "clientId": "5",
+      "status": "open"
+    }
+  ]
+}

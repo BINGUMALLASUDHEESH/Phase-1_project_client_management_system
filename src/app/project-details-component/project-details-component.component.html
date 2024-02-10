@@ -1,0 +1,23 @@
+<!-- project-details-component.component.html -->
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center sub-container">
+      <h2>Project Details</h2>
+      <button type="button" class="btn btn-primary" (click)="goBack()">Back</button>
+    </div>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Task Name</th>
+          <th>Task Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of task">
+          <td>{{ task.taskName }}</td>
+          <td>{{ task.taskDescription }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

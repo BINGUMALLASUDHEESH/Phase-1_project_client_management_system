@@ -1,0 +1,79 @@
+<div class="container">
+    <h2>Project Information</h2>
+    <button (click)="openPopup()" class="btn btn-primary mb-2">Add Project</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Project Name</th>
+          <th>Project Duration</th>
+          <th>Client ID</th>
+          <th>OPERATIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.id }}</td>
+          <td><a [routerLink]="['/projectdetails', project.id]">{{ project.projectName }}</a></td>
+          <td>{{ project.projectDuration }}</td> 
+          <td>{{ project.clientid }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteProject(project.id)">Delete</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="btn btn-primary" (click)="updateProject(project.id)">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div *ngIf="showPopup">
+      <div class="row">
+        <div class="col-6">
+          <div class="card">
+            <div class="card-header">
+              <b>Project Details</b>
+            </div>
+            <div class="card-body">
+              <form #projectdetails="ngForm" (ngSubmit)="addProject(projectdetails)">
+  
+                <div class="form-group">
+                  <label for="id">ID:</label>
+                  <input type="text" class="form-control" id="id" name="id" [(ngModel)]="projectInfo.id" #pid="ngModel" required>
+                  <span class="error" *ngIf="pid.touched && pid.invalid">
+                    Please enter the project ID
+                  </span>
+                </div> <br>
+  
+                <div class="form-group">
+                  <label for="projectName">Project Name:</label>
+                  <input type="text" class="form-control" id="projectName" name="projectName" [(ngModel)]="projectInfo.projectName" #pname="ngModel" required>
+                  <span class="error" *ngIf="pname.touched && pname.invalid">
+                    Please enter the project name
+                  </span>
+                </div> <br>
+  
+                <div class="form-group">
+                  <label for="projectDuration">Project Duration:</label>
+                  <input type="text" class="form-control" placeholder="Enter the project duration" name="projectDuration" [(ngModel)]="projectInfo.projectDuration" #pduration="ngModel" required>
+                  <span class="error" *ngIf="pduration.touched && pduration.invalid">
+                    Please enter the project duration
+                  </span>
+                </div> <br>
+  
+                <div class="form-group">
+                  <label for="clientId">Select Client:</label>
+                  <select class="form-control" id="clientId" [(ngModel)]="projectInfo.clientid" name="clientId" requires>
+                    <option *ngFor="let client of clients" [value]="client.id">{{ client.client_name }}</option>
+                  </select>
+                </div><br>
+
+                <button type="submit" class="btn btn-primary" [disabled]="!projectdetails.valid">Submit</button>
+                <br>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-6"></div>
+      </div>
+    </div>
+  </div>
+  

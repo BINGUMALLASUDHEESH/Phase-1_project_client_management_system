@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome, {{ name }}!</h1>
+  </div>
+   <hr>
+   <br>
+  <h2>Projects:</h2>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects">
+        <td><b>{{ project.projectName }}</b></td>
+        <td>{{ project.projectDuration }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <br>
+  <h2>Tasks:</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Task Name</th>
+        <th>Task Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of tasks">
+        <td><b>{{ task.taskName }}</b></td>
+        <td>{{ task.taskDescription }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+ 
+  <br>
+
+  <h2>Meetings:</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Meeting Topic</th>
+        <th>Number of persons</th>
+        <th>Date & Time</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let meeting of meetings">
+        <td><b>{{ meeting.meetingTopic }}</b></td>
+        <td>{{ meeting.numberOfPersons }}</td>
+        <td>{{meeting.startDateTime}}</td>
+        <td>{{meeting.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,70 @@
+<div class="container">
+    <h2>Meetings</h2>
+    <button class="btn btn-primary mb-3" (click)="toggleForm()">Add New Meeting</button>
+  
+    <div *ngIf="showForm">
+      <h3>Add New Meeting</h3>
+      <form #meeting="ngForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+            <label for="meetingTopic">ID:</label>
+            <input type="text" class="form-control" id="meetingTopic" name="meetingTopic" [(ngModel)]="newMeeting.id" required>
+          </div> <br>
+        <div class="form-group">
+          <label for="meetingTopic">Meeting Topic:</label>
+          <input type="text" class="form-control" id="meetingTopic" name="meetingTopic" [(ngModel)]="newMeeting.meetingTopic" required minlength="2">
+        </div> <br>
+        <div class="form-group">
+          <label for="numberOfPersons">Number of Persons:</label>
+          <input type="number" class="form-control" id="numberOfPersons" name="numberOfPersons" [(ngModel)]="newMeeting.numberOfPersons" required>
+        </div> <br>
+        <div class="form-group">
+          <label for="startDateTime">Start Date Time:</label>
+          <input type="datetime-local" class="form-control" id="startDateTime" name="startDateTime" [(ngModel)]="newMeeting.startDateTime" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="clientId">Client ID:</label>
+          <select class="form-control" id="clientId" name="clientId" [(ngModel)]="newMeeting.clientId" required>
+            <option *ngFor="let client of clients" [value]="client.id">{{ client.client_name }}</option>
+          </select>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="status">Status:</label>
+          <select class="form-control" id="status" name="status" [(ngModel)]="newMeeting.status" required>
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+          </select>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary" [disabled]="!meeting.valid">Submit</button>
+      </form>
+    </div>
+    <br>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Meeting Topic</th>
+          <th>Number of Persons</th>
+          <th>Start Date Time</th>
+          <th>Client ID</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let meeting of meetings">
+          <td>{{ meeting.id }}</td>
+          <td>{{ meeting.meetingTopic }}</td>
+          <td>{{ meeting.numberOfPersons }}</td>
+          <td>{{ meeting.startDateTime }}</td>
+          <td>{{ meeting.clientId }}</td>
+          <td>{{ meeting.status }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteMeeting(meeting.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>

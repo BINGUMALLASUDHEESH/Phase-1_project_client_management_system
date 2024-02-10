@@ -1,0 +1,64 @@
+<div class="container">
+    <h2>Add New Task</h2>
+    <form #taskform="ngForm" (ngSubmit)="addTask(taskform)">
+        <div class="form-group">
+            <label for="taskId">ID:</label>
+            <input type="text" class="form-control"  name="taskId" [(ngModel)]="task.id" required minlength="3" #tid="ngModel">
+            <span class="error" *ngIf="tid.touched && tid.invalid">
+                Task id should not be blank and it is in form "1001"
+            </span>
+        </div><br>
+        <div class="form-group">
+            <label for="taskName">Task Name:</label>
+            <input type="text" class="form-control"  name="taskName" [(ngModel)]="task.taskName" required #tname="ngModel">
+            <span class="error" *ngIf="tname.touched && tname.invalid">
+                Task Name  should not be blank
+            </span>
+        </div><br>
+        <div class="form-group">
+            <label required>Task Description:</label>
+            <textarea class="form-control" name="taskDescription" [(ngModel)]="task.taskDescription" required #tdescription="ngModel"></textarea>
+            <span class="error" *ngIf="tdescription.touched && tdescription.invalid">
+                Task description should not be blank and provide indetail description
+            </span>
+        </div><br>
+        <div class="form-group">
+            <label for="projectId">Project Name:</label>
+            <select class="form-control"  name="projectId" [(ngModel)]="task.projectid" #tproname="ngModel" required>
+                <option *ngFor="let project of projects" [value]="project.id">{{ project.projectName }}</option>
+            </select>
+            <span class="error" *ngIf="tproname.touched && tproname.invalid">
+                Project Name should be selected in the drop down menu only 
+            </span>
+        </div><br>
+        <button type="submit" class="btn btn-primary" [disabled]="!taskform.valid">Submit</button>
+    </form>
+</div>
+
+<hr><hr>
+
+<div class="container mt-5">
+    <h2>All Tasks</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Task Name</th>
+          <th>Task Description</th>
+          <th>Project ID</th>
+          <th>Operations</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.id }}</td>
+          <td>{{ task.taskName }}</td>
+          <td>{{ task.taskDescription }}</td>
+          <td>{{ task.projectid }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteTask(task.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
